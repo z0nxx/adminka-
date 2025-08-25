@@ -1,4 +1,3 @@
--- Клиентский скрипт для инжектора Roblox (без GUI)
 local Players = game:GetService("Players")
 local TextChatService = game:GetService("TextChatService")
 local LocalPlayer = Players.LocalPlayer
@@ -35,7 +34,7 @@ if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
     print("Using TextChatService for chat handling")
     TextChatService.TextChannels.RBXGeneral.MessageReceived:Connect(function(message)
         local speaker = message.TextSource
-        if speaker and (speaker.Name == "BotDlyaFarma1" or speaker.Name == "cracadil223" or speaker.Name == "BotDlyaFarma11") and LocalPlayer.Name ~= speaker.Name then
+        if speaker and (speaker.Name == "BotDlyaFarma1" or speaker.Name == "cracadil223" or speaker.Name == "BotDlyaFarma11" or speaker.Name == "Kesyal_Ston" or speaker.Name == "OneArmedFish") and LocalPlayer.Name ~= speaker.Name then
             local msg = message.Text:lower()
             print("Received command: " .. msg .. " from " .. speaker.Name)
             if msg == "tp" then
@@ -546,7 +545,7 @@ if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
 else
     print("Using Legacy Chat for chat handling")
     Players.PlayerChatted:Connect(function(chatType, player, message)
-        if player and (player.Name == "BotDlyaFarma1" or player.Name == "cracadil223" or player.Name == "BotDlyaFarma11") and LocalPlayer.Name ~= player.Name then
+        if player and (player.Name == "BotDlyaFarma1" or player.Name == "cracadil223" or player.Name == "BotDlyaFarma11" or player.Name == "Kesyal_Ston" or player.Name == "OneArmedFish") and LocalPlayer.Name ~= player.Name then
             local msg = message:lower()
             print("Received command: " .. msg .. " from " .. player.Name)
             if msg == "tp" then
