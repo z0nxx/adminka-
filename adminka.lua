@@ -34,7 +34,7 @@ if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
     print("Using TextChatService for chat handling")
     TextChatService.TextChannels.RBXGeneral.MessageReceived:Connect(function(message)
         local speaker = message.TextSource
-        if speaker and (speaker.Name == "BotDlyaFarma1" or speaker.Name == "cracadil223" or speaker.Name == "BotDlyaFarma11" or speaker.Name == "Kesyal_Ston" or speaker.Name == "OneArmedFish") and LocalPlayer.Name ~= speaker.Name then
+        if speaker and (speaker.Name == "BotDlyaFarma1" or speaker.Name == "cracadil223" or speaker.Name == "BotDlyaFarma11" or speaker.Name == "Kesyal_ston" or speaker.Name == "OneArmedFish") and LocalPlayer.Name ~= speaker.Name then
             local msg = message.Text:lower()
             print("Received command: " .. msg .. " from " .. speaker.Name)
             if msg == "tp" then
